@@ -29,6 +29,7 @@ public class SplashScreen extends AppCompatActivity {
 
 
     private void runSplash() {
+        //Splash time setup
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
