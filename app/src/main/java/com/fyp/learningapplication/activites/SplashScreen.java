@@ -2,12 +2,14 @@ package com.fyp.learningapplication.activites;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Toast;
 
 import com.fyp.learningapplication.R;
+import com.fyp.learningapplication.activites.auth.LoginActivity;
 import com.fyp.learningapplication.extra.ExtraFeatures;
 
 public class SplashScreen extends AppCompatActivity {
@@ -34,7 +36,8 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
                 //moving to new activity
-                Toast.makeText(SplashScreen.this, "Splash Added...", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(SplashScreen.this, LoginActivity.class));
+                finish();
             }
         }, SPLASH_TIME_OUT);
     }
